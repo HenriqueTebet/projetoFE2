@@ -1,24 +1,19 @@
-
-
-
+/************ Criando função para Obter a Url proposta pelo Usuario ************ */
 let pegarValor = function(){
     document.querySelector("input");
     let urlImagem = document.getElementById("url").value;
-    // urlImagem.setAttribute("src","urlImagem")
     return urlImagem
 }
 
+
+// Criamos uma variavel para armazenar o button
 let button = document.getElementById("enviar");
 
 
-// button.setAttribute("")
-
-
+/************ Adicionamos uma função ao button com base em um evento *************/
 button.addEventListener("click",function(event){
     event.preventDefault();
-    let imge = document.querySelector("img");
-    imge.setAttribute("src",`${pegarValor()}}`);
-    // let url = pegarValor();
-    console.log(imge);
+    let img = document.querySelector("img");
+    img.setAttribute("src",`${pegarValor()}`);
 });
 
