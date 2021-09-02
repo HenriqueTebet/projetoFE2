@@ -1,0 +1,41 @@
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Aplicando cor background */
+body{
+    background-color: black;
+}
+
+
+/* Estilização para form */
+form {
+    background-color: rgb(46, 48, 114);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin: 10% auto;
+    max-width: 20%;
+    padding: 20px;
+    border-radius: 10px ;    
+}
+
+/* Estilização dos cards */
+.cards{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color:beige;
+    height: 350px;
+    width:350px;
+    margin: 10% auto;
+}
+
+/* Dimensionamento da imagem */
+img{
+    max-width: 325px;
+}
