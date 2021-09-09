@@ -1,9 +1,3 @@
-/************ Criando função para Obter a Url proposta pelo Usuario ************ */
-let pegarValor = function(){
-    document.querySelector("input");
-    let urlImagem = document.getElementById("url").value;
-    return urlImagem
-}
 
 
 // Criamos uma variavel para armazenar o button
@@ -32,48 +26,34 @@ function validarCampos (){
     
 }
 
-// let titulo = document.getElementById("titulo-carro").value;
-// let descricao = document.getElementById("descricaoP").value;
+let titulo = "";
+let descricao = "";
+let urlImagem = "";
+
+
+function criarCard(){
+    let titulo = document.getElementById("titulo").value;
+    let descricao = document.getElementById("descricao").value;
+    let urlImagem = document.getElementById("url").value;
+    
+    let card = document.getElementById("cards");
+    
+    card.innerHTML += `<div> <img src="${urlImagem}">
+    <h2 id="titulo-carro">${titulo}</h2>
+    <p id="descricaoP" >${descricao}</p> </div>`;
+    
+    
+}
 
 /************ Adicionamos uma função ao button com base em um evento *************/
 button.addEventListener("click",function(event){
     event.preventDefault();
-    let img = document.querySelector("img");
-    img.setAttribute("src",`${pegarValor()}`);
+    // let img = document.querySelector("img");
+    // img.setAttribute("src",`${pegarValor()}`);
     
     
-    
-    document.getElementById("titulo-carro").innerHTML += titulo.value.trim();
-    document.getElementById("descricaoP").innerHTML += descricao.value.trim();
-    
+    criarCard();
     validarCampos();
-
-    // let card = document.getElementById("cards");
-
-    // card.innerHTML += titulo.value.trim()
-    // card.innerHTML += descricao.value.trim();
-    // card.innerHTML += img.value;
 
 })
 
-
-
-// let urlImg = ""
-// let imagemTexto = document.getElementById("url_img")
-// window.onload = imagemTexto.focus()
-
-// function createCard() {
-
-//     urlImg = document.getElementById("url_img").value
-
-
-//     let cardSection = document.getElementById("card");
-//     cardSection.innerHTML += <div> <img src="${urlImg}"></div>;
-// }
-
-// imagemTexto.addEventListener('keydown', function(event) {
-//     if (imagemTexto.value.length >= 12 && event.key != "Backspace") {
-//         imagemTexto.blur()
-//         document.querySelector("button").focus()
-//     }
-// })
