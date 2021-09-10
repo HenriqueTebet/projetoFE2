@@ -36,9 +36,9 @@ function criarCard(){
     let descricao = document.getElementById("descricao").value;
     let urlImagem = document.getElementById("url").value;
     
-    let card = document.getElementById("cards");
+    let card = document.getElementById("container-cards");
     
-    card.innerHTML += `<div> <img src="${urlImagem}">
+    card.innerHTML += `<div class="cards"> <img src= "${urlImagem}">
     <h2 id="titulo-carro">${titulo}</h2>
     <p id="descricaoP" >${descricao}</p> </div>`;
     
@@ -56,4 +56,5 @@ button.addEventListener("click",function(event){
     validarCampos();
 
 })
+
 
